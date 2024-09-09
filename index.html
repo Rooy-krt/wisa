@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>WISA Guard - security services</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="wisa" name="keywords">
+    <meta content="wisaguardsecurity" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Hide the logo on screens smaller than 768px */
+        @media (max-width: 768px) {
+            .logo-img {
+                display: none;
+            }
+        }
+        /* Full-screen Navbar on smaller screens */
+@media (max-width: 991.98px) { /* Adjust breakpoint as needed */
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #072429; /* Adjust background color as needed */
+        z-index: 1050; /* Ensure it is above other content */
+        overflow-y: auto; /* Allow scrolling if content overflows */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+        /* Custom styling for the close button if needed */
+        .btn-close {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .btn-close:hover {
+            color: lightgray;
+        }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>Ngara along Limuru RD, Suraj Plaza</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@wisaguardsecurity.co.ke</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <img src="img/logo.png" alt="Logo" class="logo-img" style="height: 120px;"> <!-- Adjust the path and height as needed -->
+            </a>
+            
+            <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"> </span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <!-- Close button for the collapsed navbar -->
+                <button type="button" class="btn-close d-lg-none" style="color: rgb(239, 239, 239); background-color: #081c1f; position: absolute; right: 0;" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">x</button>
+                
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link active" onclick="collapseNavbar()">Home</a>
+                    <a href="#about" class="nav-item nav-link" onclick="collapseNavbar()">About</a>
+                    <a href="#service" class="nav-item nav-link" onclick="collapseNavbar()">Service</a>
+                    <a href="contact.html" class="nav-item nav-link" onclick="collapseNavbar()">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+  <!-- Carousel Start -->
+<div class="container-fluid p-0 mb-5">
+    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100 h-100 carousel-img" src="img/carousel-1.jpg" alt="Image">
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7 pt-5">
+                                <h1 class="display-4 text-white mb-3 animated slideInDown">We keep a close eye on industry innovation</h1>
+                                <p class="fs-5 text-white-50 mb-5 animated slideInDown">We continually expand our product lines with acquisition and new innovation to enable us to provide you with the latest in security development and technologies.</p>
+                                <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
+                                    Learn More
+                                    <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100 h-100 carousel-img" src="img/carousel-2.jpg" alt="Image">
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7 pt-5">
+                                <h1 class="display-4 text-white mb-3 animated slideInDown">Private Investigations</h1>
+                                <p class="fs-5 text-white-50 mb-5 animated slideInDown">We are a leading safety and security consultancy company. We specialize in fraud and forensic
+                                    investigations, asset tracking/recovery, threat/risk assessment, background checks and
+                                    home debugging among other services.</p>
+                                <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
+                                    Learn More
+                                    <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!-- Carousel End -->
+
+<style>
+    /* Set the carousel container and items to occupy full height */
+    #header-carousel,
+    .carousel-inner,
+    .carousel-item {
+        height: 100vh;
+    }
+
+    /* Make sure images cover the entire area */
+    .carousel-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+    }
+</style>
+
+
+
+    <!-- About Start -->
+    <section id="about">
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
+                        <img class="position-absolute w-100 h-100 pt-5 pe-5" src="img/about-1.jpg" alt="" style="object-fit: cover;">
+                        <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="img/about-2.jpg" alt="" style="width: 200px; height: 200px;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">About Us</div>
+                        <h1 class="display-6 mb-5">We focus on quality, excellence, continual improvement and innovation.</h1>
+                        <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
+                            <p class="text-dark mb-2">At all times to deliver and ensure as a company and individual we value above all else honesty,
+                                integrity, professionalism, mutual respect and social responsibility.</p>
+                            <span class="text-primary">Core Values</span>
+                        </div>
+                        <p class="mb-5">Our extensive skills, knowledge and experience are vested in our recruited team of young, well learned and
+                            experienced staff. We look forward to providing quality security products and services forindustrial,
+                            commercial, residential at government departments
+                            Wisa Guards Security Services Limited provides manned guarding services, canine security private
+                            investigation, travel/escort security, security consulting and technical security to clients throughout Kenya
+                            and beyond.</p>
+                        <a class="btn btn-primary py-2 px-3 me-3" href="about.html">
+                            Learn More
+                            <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </a>
+                        <a class="btn btn-outline-primary py-2 px-3" href="contact.html">
+                            Contact Us
+                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- About End -->
+
+
+    <!-- Causes Start -->
+    <div class="container-xxl bg-light my-5 py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Feature Causes</div>
+                <h1 class="display-6 mb-5">Why Choose Us?</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
+                                <small>Clients</small>
+                            </div>
+                            <h5 class="mb-3">The best client satisifaction</h5>
+                            <p>We offer the best of our ability to ensure client satisifaction</p>
+                            <div class="causes-progress bg-light p-3 pt-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-dark">Affordable <small class="text-body">services</small></p>
+                                    <p class="text-dark">The best <small class="text-body">client satisifaction</small></p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                        <span>18+ </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/courses-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
+                                <small>Proffesionalism</small>
+                            </div>
+                            <h5 class="mb-3">Experinced Personnel</h5>
+                            <p>With well trained and experienced personnel, we aim at providing the best</p>
+                            <div class="causes-progress bg-light p-3 pt-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-dark">Affordable <small class="text-body">services</small></p>
+                                    <p class="text-dark">Experinced <small class="text-body"> personnel</small></p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                        <span>200+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/courses-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
+                                <small>Experince</small>
+                            </div>
+                            <h5 class="mb-3">Years of Service</h5>
+                            <p>For the past 2 years, WISA has been the at the top serving client satisifactionin the security sector</p>
+                            <div class="causes-progress bg-light p-3 pt-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-dark">Affordable <small class="text-body">services</small></p>
+                                    <p class="text-dark">Years <small class="text-body"> of Service</small></p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                        <span>2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/courses-3.jpg" alt="">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Causes End -->
+
+
+    <!-- Service Start -->
+<section id="service">
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
+            <h1 class="display-6 mb-5">Learn More About What We Do And Get Involved</h1>
+        </div>
+        <div id="service-items" class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
+                    <h4 class="mb-3">Background Checks</h4>
+                    <p class="mb-4">Background help people and organizations to make proper and verified decisions about the
+                        people they interact with in business and the people they employ.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
+                        <h4 class="mb-3">Corporate Due Diligence</h4>
+                        <p class="mb-4">This is to allow a company to make important business decisions before engagement. We
+                            always advise that before you trust verify.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
+                        <h4 class="mb-3">Fraud and Forensic Investigations</h4>
+                        <p class="mb-4">Crime against businesses keep evolving in many ways and every organization should equip
+                            itself with modern techniques to address the vice.</p>
+                    </div>
+                </div>
+            <!-- Add more service items here -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
+                    <h4 class="mb-3">Asset Tracing</h4>
+                    <p class="mb-4">Many reputable and legitimate companies fall victim to loss of their property in
+                        unprecedented ways that may lead to the closure of an organization. It is from such case that we conduct tracing and recovery of said assets</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
+                    <h4 class="mb-3">Home/office Debugging</h4>
+                    <p class="mb-4">As a result, evolving technology, there is a lot of espionage spying through the use of
+                        different gadgets. This may be weaponized to be used by opponents or business rivals get
+                        information from your organization</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
+                    <h4 class="mb-3">Undercover Investigations/Intelligence Collection</h4>
+                    <p class="mb-4">Undercover investigations can be used by an organization to employ and manage the day- to- day
+                        challenge for its employees. This may include; stealing of small items, office supplies and
+                        merchandise, and internal sabotage or malicious towards the company’s facilities, property or
+                        persons.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
+                    <h4 class="mb-3">Motor Vehicle Forensic Analysis</h4>
+                    <p class="mb-4">Due to globalization and advancing technology, motor vehicles are always tampered with by
+                        defacing their original identity marks as designed by manufacturers. This is done in a way
+                        that if one is not an expert, then they can easily be duped.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
+                    <h4 class="mb-3">Special Assignments</h4>
+                    <ul class="mb-4">
+                       <li> Training on matters of security</li>
+                        <li>Debt collection(corporate)</li>
+                       <li>CCTV training and management</li>
+                       <li>Physical security</li>
+                       <li>Journey/trip management-corporate</li>
+                       <li>Electronic security &access control-corporate</li>
+                       <li>Workplace violence</li>
+
+                       </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
+                    <h4 class="mb-3">ICT Layout and Support</h4>
+                    <p class="mb-4">We do provide above par support in computer maintenance; routine service, repairs of related
+                        accessories, networking, software support/design and consultancy in the ICT sphere.
+                        On Structured Cabling and Networking you can count on us to cabling solutions based on recognized
+                        international standards.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</section>
+<!-- Service End -->
+
+
+
+<!-- Client Impact Start -->
+<div class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Our Clients:</div>
+                <h1 class="display-6 text-white mb-5">Celebrating Our Achievements Together</h1>
+                <p class="text-white-50 mb-0">We proudly work with a diverse range of clients, including private companies, government agencies, and NGOs. Our engagement spans various sectors such as Advertising, Humanitarian Work, Security, Agriculture, Transport, Finance, and Pharmaceuticals. Here’s how our collaboration has made a difference:</p>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="h-100 bg-white p-5 rounded">
+                    <h3 class="mb-4">Our Impact</h3>
+                    <p class="mb-4">We are dedicated to achieving excellence and creating lasting impact in each sector we serve including special Assignments such as:</p>
+                    <ul class="list-unstyled mb-4">
+                        <li> Training on matters of security</li>
+                        <li>Debt collection(corporate)</li>
+                       <li>CCTV training and management</li>
+                       <li>Physical security</li>
+                    </ul>
+                    <p class="mb-0">For more detailed information or to discuss how we can support your goals, <a href="contact.html" class="text-primary">contact us</a> today.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Client Impact End -->
+
+
+
+    <!-- Testimonial Start
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Testimonial</div>
+                <h1 class="display-6 mb-5">Trusted By Thousands Of People And Nonprofits</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;">
+                    <div class="testimonial-text rounded text-center p-4">
+                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                        <h5 class="mb-1">Doner Name</h5>
+                        <span class="fst-italic">Profession</span>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;">
+                    <div class="testimonial-text rounded text-center p-4">
+                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                        <h5 class="mb-1">Doner Name</h5>
+                        <span class="fst-italic">Profession</span>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;">
+                    <div class="testimonial-text rounded text-center p-4">
+                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                        <h5 class="mb-1">Doner Name</h5>
+                        <span class="fst-italic">Profession</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                        <img src="img/logo.png" alt="Logo" class="logo-img" style="height: 120px;"> <!-- Adjust the path and height as needed -->
+                    </a>
+                    <p>The company began with the aim of the filling the gap overlooked by the predecessor firms...</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-1" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Address</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Ngara along Limuru RD, Suraj Plaza</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+254726704151</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@wisaguardsecurity.co.ke</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link"href="#about" class="nav-item nav-link">About</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="#service" class="nav-item nav-link">Service</a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Newsletter</h5>
+                    <p>Would you like to recieve regular updates on our products and offers?</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="">wisaguardsecurity.co.ke</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Powered By <a href="https://krtechnologies.co.ke">KRTechnologies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+
+    <!-- JavaScript to Rotate the Service Items -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const items = document.querySelectorAll('#service-items .col-lg-4');
+            let currentIndex = 3;
+    
+            function showItems() {
+                // Hide all items initially
+                items.forEach((item) => {
+                    item.style.display = 'none';
+                });
+    
+                // Show exactly three items in a rotating fashion
+                for (let i = 0; i < 3; i++) {
+                    // Calculate the index to show, wrapping around using modulo
+                    const indexToShow = (currentIndex + i) % items.length;
+                    items[indexToShow].style.display = 'block';
+                }
+    
+                // Increment the current index by 1 to rotate the items one by one
+                currentIndex = (currentIndex + 1) % items.length;
+    
+                // Ensure the index wraps back to zero when it reaches the end to avoid showing blanks
+                if (currentIndex + 2 >= items.length) {
+                    currentIndex = 0;
+                }
+            }
+    
+            // Initial display of items
+            showItems();
+    
+            // Set interval to rotate items every 3 seconds
+            setInterval(showItems, 3000);
+        });
+    </script>
+    <script>
+        function collapseNavbar() {
+            var myCollapse = document.getElementById('navbarCollapse');
+            var bsCollapse = new bootstrap.Collapse(myCollapse, {
+                toggle: false
+            });
+            bsCollapse.hide();
+        }
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+   
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
